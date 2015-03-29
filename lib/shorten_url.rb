@@ -4,7 +4,7 @@ module ShortenUrl
       @host = host
     end
 
-    def shorten(url, length=5)
+    def shorten(url, length)
       Digest::SHA256.hexdigest(url)[0..length]
     end
   end
